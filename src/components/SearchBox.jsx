@@ -14,8 +14,8 @@ function SearchBox({UpdateWeather}) {
     let data = await response.json();
     let result = {
       temp: data.main.temp,
-      tempMin: data.main.temp_min,
-      tempMax: data.main.temp_max,
+      latitude: data.coord.lat,
+      longitude: data.coord.lon,
       humidity: data.main.humidity,
       pressure: data.main.pressure,
       weatherType: data.weather[0].main,
