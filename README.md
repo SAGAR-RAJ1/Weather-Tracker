@@ -8,7 +8,7 @@ A modern weather application built with React + Vite that allows users to search
 
 🔗 Deployed on Vercel:
 
-weather-tracker-seven.vercel.app
+👉 [Live Website](https://weather-tracker-seven.vercel.app)
 
 
 ## 📸 Screenshot
