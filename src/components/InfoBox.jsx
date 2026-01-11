@@ -4,7 +4,7 @@ import '../Css/InfoBox.css'
 function InfoBox({info}) {
   return (
     <div className="infoBox">
-        <h3>Weather Information</h3>
+        <h2 className='text-2xl mb-4'>Weather Information</h2>
         <p>City: {info.cityName}, {info.country}</p>
         <p>Temperature: {info.temp} °C </p>
         <p> Feels_Like : {info.feelslike}°C </p>

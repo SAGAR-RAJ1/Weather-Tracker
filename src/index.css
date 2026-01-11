@@ -1,1 +1,15 @@
 @import "tailwindcss";
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  h1{
+    color: rgb(245, 245, 245);
+    -webkit-text-stroke: 1.5px #00c6ff;   /* text outline */
+    font-weight: 700;
+  }

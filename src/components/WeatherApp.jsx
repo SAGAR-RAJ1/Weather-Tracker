@@ -12,7 +12,8 @@ const WeatherApp = () => {
     }
   return (
     <div style={{textAlign: 'center', marginTop: '20px'}}>
-      <h1>Weather App By SRC</h1>
+      <h1 className='text-2xl'>Weather App By SRC</h1>
+      <br />
       <SearchBox UpdateWeather={UpdateWeather}/>
       <InfoBox info={Weather}/>
     </div>
