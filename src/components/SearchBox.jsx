@@ -4,7 +4,7 @@ import Button from '@mui/material/Button'
 import '../Css/SearchBox.css'
 
 
-function SearchBox() {
+function SearchBox({UpdateWeather}) {
   const [city, setcity] = useState("")
   const API_URL = "https://api.openweathermap.org/data/2.5/weather?"
   const API_KEY = "fa4913e9435c45c042df3747cf825057";
@@ -12,7 +12,6 @@ function SearchBox() {
   let getWeatherInfo= async()=>{
    let response = await fetch (`${API_URL}q=${city}&appid=${API_KEY}&units=metric`);
     let data = await response.json();
-    console.log(data)
     let result = {
       temp: data.main.temp,
       tempMin: data.main.temp_min,
@@ -24,17 +23,22 @@ function SearchBox() {
       windSpeed: data.wind.speed,
       country: data.sys.country,
       sunsetTime: data.sys.sunset,
+      feelslike: data.main.feels_like,
+      lat: data.coord.lat,
+      lon: data.coord.lon
     };
+    console.log(data)
+    return result;
   }
 
   let handleChange=(event)=>{
     setcity(event.target.value);
-  }
-  let handleSubmit =(event)=>{
+  };
+  let handleSubmit = async(event)=> {
     event.preventDefault();
     console.log("Form Submitted -> ", city);
     setcity("");
-    getWeatherInfo();
+    UpdateWeather(await(getWeatherInfo()));
   }
   return (
     <div className='SearchBox'>
