@@ -6,8 +6,10 @@ function InfoBox({info}) {
     <div className="infoBox">
         <h3>Weather Information</h3>
         <p>City: {info.cityName}, {info.country}</p>
-        <p>Temperature: {info.temp} °C  _ Feels_Like : {info.feelslike}°C </p>
-        <p>Latitude : {info.lat}  ,  Longitude : {info.lon}</p>
+        <p>Temperature: {info.temp} °C </p>
+        <p> Feels_Like : {info.feelslike}°C </p>
+        <p>Latitude : {info.lat} </p>
+        <p> Longitude : {info.lon}</p>
         <p>Humidity: {info.humidity} %</p>
         <p>Pressure: {info.pressure} hPa</p>
         <p>Weather: {info.weatherType}</p>

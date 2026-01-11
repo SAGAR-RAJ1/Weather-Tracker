@@ -42,7 +42,8 @@ function SearchBox({UpdateWeather}) {
   }
   return (
     <div className='SearchBox'>
-      <h2>Search for the Weather</h2>
+      <h1 className='text-4xl'>Search for the Weather</h1>
+      <br />
       <form action="" onSubmit={handleSubmit}>
       <TextField id="City" label="City Name" variant="outlined" required value={city} onChange={handleChange}/>
       <br /><br />
